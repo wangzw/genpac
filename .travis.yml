@@ -1,12 +1,12 @@
 language: python
 python:
-  - "2.7"
-# command to install dependencies
-install: "python ./setup.py install"
-# command to run tests
-script: 
-  - genpac --config-from=config.ini
-  - ls
-# deploy pac file
+- '2.7'
+install: python ./setup.py install
+script:
+- genpac --config-from=config.ini
+- ls
 after_success:
-  - bash deploy.sh
+- bash deploy.sh
+env:
+  global:
+    secure: tMBzslzarXvAQFA9+aq1DlWtPO5cx8Wg9eZG1q+UazfqCW9OFfo5dDh5Xr6ZSPSU5rCnc8IWZsoCGY4z0xTsCdqg+fqJlDNYfGugtC7Ws6D7Px3PBe/rwaYf6OJ4WOParPES/MKHM0zCTMET0pKb8k65eDxY9Wc4uw80AdiJ8w0H4gSUotZOD32jo/bfrzHqqpEaO0nrJuHpZqXpdyfxKol0SS8MkWfFy6xjBTndtHq+QYkrrW1GXzXp5egPcyeVdoN94YNe6dfOAP2+oF0oTDM9OMAmvMniuUcM/kVxM1FDU5srRx9RWWABwHfxSCswhgEbWRCgtSzcCFuCivHyJr47JQNFGjBb5QwQ1o0Q4z5gITs6LjPrskL0FvxudHVKACrcSpLQyqmB6dhtcS70nFw4mbEcHiEvYxYjy/2Dc4axmdLRZ9S2TZJvInzC6b6qr6XwSBk9yK8f91jr7drGdQ2ASk+t0sR2owpsOhycvK4FmEe1/b8WRAIxtaCnb6WfNcUVDHcQn95iJfzc679Uj22AvioUwCD/aEEAAVMaMemh+t6Bi5nh236/7BZX3bWD7ulyvBS3+l+T36pCdtBY3CegBXDlI6WqYKGdo61r+Nh6dhmA2zTO+cTm0wpcGDPZ3R6XfYsTWcz70+5e3YjCy3doRgXb1lxCbIcXN3riWXs=
